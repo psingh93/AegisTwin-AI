@@ -1,0 +1,6 @@
+{
+  "name": "CycloneGuard AI - Real-Time Disaster Intelligence & Asset Defense",
+  "description": "Mission-critical cyclone tracking, geospatial storm surge modeling, critical infrastructure vulnerability assessment, and automated emergency action planning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

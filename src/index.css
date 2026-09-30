@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-command: #050607;
+    --card-command: #0a0d0f;
+    --panel-command: #111518;
+    --border-command: #1c242c;
+    --border-accent: #0284c7;
+    --text-primary: #f5f7f8;
+    --text-muted: #8a9399;
+    --text-subtle: #5c666c;
+  }
+
+  body {
+    background-color: #050607;
+    color: #f5f7f8;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Disaster Ops Grid Texture */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(14, 165, 233, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 165, 233, 0.04) 1px, transparent 1px);
+}
+
+/* Subtle Command Center Scanline */
+.scanline-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.15)
+  );
+  background-size: 100% 4px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #05070a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Pulse animation for critical risk items */
+@keyframes critical-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.15); }
+}
+
+.animate-risk-pulse {
+  animation: critical-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Enterprise glass panel */
+.command-panel {
+  background: rgba(10, 14, 23, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid #161f30;
+}
+
+.command-panel-accent {
+  background: rgba(10, 14, 23, 0.96);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(2, 132, 199, 0.4);
+  box-shadow: 0 0 20px -5px rgba(2, 132, 199, 0.15);
+}
